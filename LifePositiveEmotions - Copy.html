@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <title>EMOTION ANALYSIS</title>
+        <Style>
+	#article
+	{
+	   margin-left: 15%;
+	   margin-right: 15%;
+		background-color: 999;
+		font-size: 20px;
+		text-decoration-color: gainsboro;
+		text-decoration-style:wavy;
+            
+    }
+    
+    .inner{
+        
+        width: 300px;
+        height: 400px;
+        background-color: pink;
+        font-size: 20px
+    }
+    
+    #results
+    {
+        font-size: 40px;
+        text-decoration:blue;
+    }
+    
+     #results1
+    {
+        font-size: 40px;
+        text-decoration:blue;
+    }
+    
+     #results2
+    {
+        font-size: 40px;
+        text-decoration:blue;
+    }
+        </Style>
+   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <body>
+        <div align="center"><h1>ANALISE YOURSELF WITH THE QUESTIONS BELOW</h1></div>
+        <div id="section">
+            
+            <div id="article">
+			
+
+
+                   <script>
+var allArrays = [ 
+[" Do you feel "],
+[
+
+"acceptance",
+"admiration",
+"adoration",
+"affection",
+"amazement",
+"amusement",
+"anticipating",
+"assertive",
+"attentive",
+"attraction",
+"awe",
+"bliss",
+"brazen",
+"calm",
+"carefree",
+"caring",
+"cheeky",
+"cheerfulness",
+"comfortable",
+"confident",
+"content",
+"courageous",
+"curiosity",
+"cynical",
+"delighted",
+"determined",
+"dominant",
+"driven",
+"eagerness",
+"ecstasy",
+"elation",
+"empathy",
+"enchanted",
+"enjoyment",
+"enlightened",
+"enthusiasm",
+"epiphany",
+"euphoria",
+"excitement",
+"expectancy",
+"fascination",
+"focused",
+"fondness",
+"friendliness",
+"glee",
+"gratitude",
+"happiness",
+"hope",
+"humility",
+"infatuation",
+"insightful",
+"interest",
+"intrigued",
+"joviality",
+"joy",
+"jubilation",
+"kind",
+
+"liking",
+"love",
+"lust",
+"modesty",
+"mystified",
+"nostalgic",
+"optimistic",
+"passion",
+"pleased",
+"pleasure",
+"positive",
+"pride",
+"relaxed",
+"relieved",
+"satisfaction",
+"Schadenfreude",
+"self-caring",
+"self-compassionate",
+"self-confident",
+"self-motivated",
+"self-respecting",
+"self-understanding",
+"sentimental",
+"serenity",
+"strong",
+"surprise",
+"sympathy",
+"tenderness",
+"thankfulness",
+"thrilled",
+"triumphant",
+"trust",
+"worthy"], 
+ [" about "],
+[ "trading", "MPAAD","Self Love","PRAYER", "DREAM","WEALTH CREATION",
+"BATHING", "SUPPER","COMMUNICATION", "LISTENING", "LIFESTYLE","RELIGION AND EXISTENCE","CONTENTMENT",
+"FIXED MONDAY LAUNDRY","PHYLOSOPHY", "TRUTH"," LIFE","SAFETY","FEAR", "WORRY", "GUILT", "CARE","MISERY", "ENVY"," POVERTY", "JELOUSY","DISAPOINTMENT", "HATRED"," UNCLEANLINESS", "CRITICISM", "SELFISHNESS", "SELFISH AMBITION"," LASCIVIOUSNESS", "COVERTOUSNESS", "WICKEDNESS"," DECEIT"," LAZINESS","MACIEVILLINISM","LEWDNESS", "AN EVIL EYE"," PRIDE"," FOOLISHNESS", "DISAPOINTMENT OF ANY KINDMEDIOCRITY", "INDIFFERENCE","SORROW ", "LET GO"
+,"GRATITUDE"," HOW DID I HELP SOMEONE"," FEELING",
+
+"PRAYER"," DREAM","MONEY","POVERTY", "RICHES"," WEALTH","SERENITY"," MEDITATION","ILLUSIONS", "CONFUSION", 
+"READING","PURITY", "CONTEMNTMENT", "MEDIOCRITY",
+"ONLINE TRAINING","CLEANLINESS"," HAPPINESS EVERY HOUR","HEALTH",
+"EXERCISE",
+"FRUITS OF SPIRIT","MORTIVATIONAL TALKS"," SELF IMPROVEMENT","MARRIAGE", "DATING", "RELATIONSHIPS","ROMANCE"," LOVE"," FAMILY",
+"READING","EDUCATION"," BUSINESS",
+"PEOPLE WORLD CREATION(things done by other people(arts))","LUST"," STRESS"," CONFIDENCE"," FAITH","METAPHYSICS"," QUANTUM PHYSICS","NATURAL LAWS"," INNER WORLD VS OUTER WORLD",
+
+"GOOD VERSUS EVIL", "THE MIND","INFINITE INTELLIGENCE", "ADVERSE CONDITIONS",
+"MONEY FOR CONDITIONS NOW","SOCIAL ASSOCIATION"," PEOPLE"," EVOLUTION(how evolved are you on knowledge and experience on the steps thathave to be taken)",
+"RELATIONSHIPS"," RELAXATION"," DESTINY","HARMONY"," NOW","EMOTION CONTROL AND BALANCE","MENTAL CHEMISTRY","RIGHT THINKING VS WRONG THINKING"
+,
+"REFLECTIONS","SEX"," MEN"," GIRLS", "BIBLE STUDY","SURVIVAL", "REPRODUCTION"," PARENTS","THE DESTINY REALISATION OF BODY, THE MIND, THE SOUL, WHAT EACH WANTS",
+"GIRLFRIEND", "WIFE",
+"COMPATIBILITY","SPIRITUALITY AND RELIGION","LACK OF PURPOSE", "SUPERSTITION"," HEAVEN"," CREATIVITY","CHURCH"," PROSPERITY","NATURE OF GOD AND HIS RELATIONSHIP TO THE BIBLE",
+"INTUITION", "HABBITS","EXISTENTIALISM VS ESSENCE","GOD"," JESUS","MATERIAL POSSESSION"," WITCHCRAFT","NEEDS AND WANTS ANALYSIS", "GROOMING","VISITING ", "GOALS"
+
+ ],["? Because its a positive emotion that you must feel in your life about all you are asociating with, even about it, But if you do not, understand that you have the chance and reason to feel it for yourself and for your life and not allow your mind to deprive you of happiness and imprison your soul because it does not mean you should now condermn yourself feeling unfavoured " ]];
+ 
+ function allPossibleCases(arr) {
+  if (arr.length === 0) {
+    return [];
+  } 
+else if (arr.length ===1){
+return arr[0];
+}
+else {
+    var result = [];
+    var allCasesOfRest = allPossibleCases(arr.slice(1));  // recur with the rest of array
+    for (var c in allCasesOfRest) {
+      for (var i = 0; i < arr[0].length; i++) {
+        result.push( arr[0][i] + " " + " " +  allCasesOfRest[c] + '<br/>'  );
+      }
+    }
+    return result;
+  }
+
+}
+var r=allPossibleCases(allArrays);
+document.write(r);
+</script>
